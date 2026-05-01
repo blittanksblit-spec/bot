@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 import uuid
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
@@ -15,7 +16,7 @@ from telegram.ext import (
 )
 
 # ==================== НАСТРОЙКИ ====================
-BOT_TOKEN = "8628314916:AAF77mW57UxUoRk-TJamDP7hN68jhLIpzTM"
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 DATA_FILE = "data.json"
 MAX_PLAYERS = 7
 REMINDER_HOURS_BEFORE = 2
